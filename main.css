@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;/*размер шрифта*/
+    color: #ffffff;
+    font-size: 16px;
+    background: linear-gradient(179deg,rgb(0, 0, 0) 0%, rgb(138, 11, 19) 100%);
+}
+
+a{
+    text-decoration: none;
+    color:#8b0000
+}
+
+
+.wrapper{
+    background: linear-gradient(179deg,rgb(0, 0, 0) 0%, rgb(66, 6, 6) 100%);
+    width: 100%;
+}
+.container{ /*обращение к классу контейнер*/
+    width: 1000px;
+    margin: 0 auto;
+}
+header { /*обращение к шапке*/
+    padding: 50px 0;
+    color: #fff;
+}
+.logo , 
+footer .blocks .logo { /* обращение к лого*/
+    text-transform: uppercase; /*текст в верхнем регистре*/
+    font-size: 29px; /*размер*/
+    font-weight: 800; /*жирност*/
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Базовая полоска — скрыта по умолчанию */
+header nav ul li:not(.btn) a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: #8b0000;
+    
+    border-radius: 10px;
+}
+
+/* При наведении — появляется полоска */
+header nav ul li:not(.btn) a:hover::after {
+    width: 100%;
+}
+
+/* У активного — полоска всегда */
+header nav ul li.active a::after {
+    width: 100%;
+}
+
+/* Кнопка — без полоски, только цвет */
+header nav ul li.btn a {
+    background: #8b0000;
+    padding: 9px 17px;
+    border-radius: 9px;
+    transition: background 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li.btn a:hover {
+    background: #f91919;
+}
+.hero{ /*1 блок*/
+    padding-bottom: 100px;/*внизу был небольшой отступ*/
+    position: relative;
+
+
+}
+.hero--info{ /*секция содержащая весь текст*/
+    width: 50%;
+    padding-top: 50px; /*остсуп от лого*/
+
+}
+.hero--info h2{
+    color:#8b0000;
+    font-size: 20px;
+    font-weight: 1000;
+
+}
+.hero--info h1{
+    
+    font-size: 35px;
+    font-weight: bold;
+
+}
+.hero--info p {
+    font-size: 10px;
+    margin: 10px 0;
+}
+.hero--info .btn{
+    background: #f91919;
+    color: #fff;
+    border-radius: 40px;
+    padding:  15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+}
+.hero--info .btn:hover{ /*кнопка*/
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.hero img{
+    margin:12px 0px;
+    border-radius: 40px;
+    
+}
+.container big-text{
+    font-size: 100px;
+}
+
+
+.intro-text { /*16.07.2025*/ /*тест под заголовком*/
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.intro-title { /*текст а ты знаешь кто ты делает жирным и большим */
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.disclaimer { /*мелкий текст*/
+    font-size: 14px;
+    font-style: italic;
+    margin: 15px 0;
+    color: #ccc;
+}
+
+.link-note{ /*2 строчки маленькие*/
+    margin-top: 15px;
+    font-size: 14px;
+    color: beige;
+    opacity: 0,9;
+}
+
+.action-button { /*кнопка пройти тест на животину*/
+    background: #f91919;
+    color: #fff;
+    border-radius: 40px;
+    padding: 15px 30px;
+    border: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.action-button:hover { 
+    cursor: pointer;
+    transform: scale(1.1); /*увеличивается при наведеении*/
+    background: #8b0000;
+}
+
+
+.hero-row { /*расположение 2 блоков */
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-start;
+    gap: 60px; /*расстояние между блоками*/
+    opacity: 0,95;
+    
+}
+
+
+.intro-block { /*2 блок */
+    width: 45%;
+   
+    color: rgba(0, 0, 0, 1);
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);/*полупрозрачный фон*/
+    border-radius: 20px; /*скруглениекраев фона*/
+    box-shadow: 0 0 20px rgba(0,0,0,0.2); /*легкая тень*/
+    padding-top: 30px;
+    margin-top: 20px;
+}
+footer{
+    background: black;
+    padding: 40px;
+    margin-top: 40px;
+    
+}
+footer .blocks{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.container.cherry-block { /*страница с вишней*/
+    max-width: 900px;
+    margin: 60px auto 80px auto; /*отступ сверху и снизу выравнивание по центру*/
+    padding: 40px 30px; /*внутренние отступы*/
+    background: rgba(255, 255, 255, 0.08); /*полупрозрачный фон*/
+    border-radius: 20px; 
+    box-shadow: 0 0 30px rgba(189, 0, 13, 0.6); /*сияние краев*/
+    color: #fff;
+}
+
+.cherry-title { /*заголовок*/
+    font-size: 40px; /*крупный шрифт*/
+    font-weight: 800; /*жирный*/
+    margin-bottom: 25px;
+    color: #f91919;
+    line-height: 1.2; 
+    text-align: center; /*по центру*/
+    font-family:hang;
+}
+
+.cherry-text { /*текст под заголовокм*/
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+.cherry-text strong { /*акценты*/
+    font-weight: 700;
+    color: #f91919;
+}
+
+.style-images { /*фотки*/
+    display: flex;
+    gap: 30px; /*расстояние между фотками*/
+    margin: 40px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.style-img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.651);
+    object-fit: cover;
+}
+
+/* Кнопка */
+.action-button {
+    background: #f91919;
+    color: #fff;
+    border-radius: 40px;
+    padding: 15px 40px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.action-button:hover {
+    background: #8b0000;
+    transform: scale(1.05);
+}
+
+/* Текст блока с тестом */
+.test-block {
+    background: rgba(255, 25, 25, 0.1);
+    border: 2px solid #f91919;
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin-top: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.style-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    gap: 30px;
+    justify-content: center;
+}
+
+.img-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.style-img {
+    object-fit: cover;
+    width: 300px;
+    height: 400px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+.test-block { /*кнпока на тест ягоды*/
+    text-align: center;
+    margin-top: 40px;
+}
+
